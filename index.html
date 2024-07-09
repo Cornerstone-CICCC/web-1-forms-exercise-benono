@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Information Form</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
+      <fieldset class="personal-infomation">
+        <legend>Personal Infomation</legend>
+        <label for="name">
+          <span>Name:</span><input type="text" name="name" id="name" required />
+        </label>
+        <label for="email">
+          <span>Email:</span>
+          <input type="email" name="email" id="email" required />
+        </label>
+        <label for="password">
+          <span>Password:</span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            pattern="[a-zA-Z0-9]{10,}"
+            title="10 characters, any letter or number"
+          />
+        </label>
+        <label for="Bio">
+          <span>Date of Birth:</span>
+          <input type="date" name="birthday" id="birthday" required />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="color">
+          <span>Favorite Color:</span>
+          <input class="color" type="color" name="color" id="color" />
+        </label>
+        <label for="hobby">
+          <span>Hobby:</span>
+          <input type="text" name="hobby" list="hobbies" />
+          <datalist id="hobbies">
+            <option value="Drawing">Drawing</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Dancing">Dancing</option>
+          </datalist>
+        </label>
+        <label for="level">
+          <span>Experience Level:</span>
+          <input type="range" name="level" id="level" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Preferences</legend>
+        <label>
+          <span>Preferred Contact Method:</span>
+          <select name="method" id="">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="mail">Mail</option>
+          </select>
+        </label>
+        <label for="subscribe">
+          <span>Subscribe to Newsletter:</span>
+          <input type="checkbox" name="subscribe" id="subscribe" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Preferences</legend>
+        <label>
+          <span>Gender:</span>
+          <div>
+            <input type="radio" name="gender" value="male" id="male" />
+            <label for="male">Male</label>
+          </div>
+          <div>
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="female">FeMale</label>
+          </div>
+          <div>
+            <input type="radio" name="gender" value="other" id="other" />
+            <label for="female">Other</label>
+          </div>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>More Infomation</legend>
+        <label for="bio">
+          <span>Bio:</span>
+          <textarea name="bio" id="bio" cols="50" rows="5"></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Upload Documents</legend>
+        <label for="document">
+          <span>Resume and other certificates:</span>
+          <input
+            type="file"
+            name="document"
+            id="document"
+            accept=".doc,.docs,.pdf,.jpg,.png"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Submission</legend>
+        <button type="reset" value="Reset">Reset</button>
+        <button type="submit" value="Submit">Submit</button>
+      </fieldset>
     </form>
-</body>
+  </body>
 </html>

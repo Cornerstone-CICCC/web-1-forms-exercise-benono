@@ -13,4 +13,54 @@ form {
   margin: 20px auto;
 }
 
+fieldset {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  margin: 10px 0;
+  span {
+    display: block;
+    padding: 6px 0;
+  }
+  input {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+  }
+  .color {
+    width: 100%;
+  }
+}
+
+fieldset.personal-infomation {
+  input {
+    width: 100%;
+    line-height: 1.5rem;
+  }
+}
+
+legend {
+  padding: 2px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+select {
+  width: 100%;
+  line-height: 1.5rem;
+  padding: 4px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  color: white;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=styles.css.map */
